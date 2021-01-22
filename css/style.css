@@ -92,11 +92,16 @@ body {
     margin: 1px 5px;
     line-height: 15px;
   }
+  #trailer iframe {
+    max-width: 316.5px;
+    max-height: 179.50px;
+  }
   #trailer button {
     width: 100px;
     height: 40px;
     font-size: 10px;
     line-height: 15px;
+    top: 22%;
   }
 }
 
@@ -273,6 +278,8 @@ body {
   border: solid 2px black;
   -webkit-box-shadow: 12px 8px 5px rgba(0, 0, 0, 0.7);
           box-shadow: 12px 8px 5px rgba(0, 0, 0, 0.7);
+  width: 560px;
+  height: 315px;
 }
 
 #trailer .wonder_woman_1984 {
