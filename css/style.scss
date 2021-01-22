@@ -91,6 +91,32 @@ body {
     }
 }
 
+@media only screen and (max-width: 600px) {
+    #header {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2)), url("../assets/mobile_cover.png");
+        .title {
+            img {
+                width: 300px;
+            }
+            .button {
+                font-size: 10px;
+                width: 100px;
+                height: 40px;
+                margin: 1px 5px;
+                line-height: 15px;
+            }
+        }
+    }
+    #trailer {
+        button {
+            width: 100px;
+            height: 40px;
+            font-size: 10px;
+            line-height: 15px;
+        }
+    }
+}
+
 @keyframes fadeIn {
     0% {
         opacity: 0;
