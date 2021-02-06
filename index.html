@@ -82,6 +82,32 @@
         </div>
     </div>
 
+    <div class="grid-x grid-margin-x" id="modal">
+        <div class="cell small-4 small-offset-4 large-2 large-offset-5">
+            <a role="button" class="button" href="#openModal">Open Gallery Full Size</a>
+            <div id="openModal" class="modalDialog">
+                <div>
+                    <a href="#close" title="Close" class="close">X</a>
+                    <div class="grid-x" id="modal_gallery">
+                        <div class="cell small-12 large-10 large-offset-1 modal_slider">
+                            <img src="./assets/modal_gallery1.jpg">
+                            <img src="./assets/modal_gallery2.jpg">
+                            <img src="./assets/modal_gallery3.jpg">
+                            <img src="./assets/modal_gallery4.jpg">
+                            <img src="./assets/modal_gallery5.jpg">
+                            <img src="./assets/modal_gallery6.jpg">
+                            <img src="./assets/modal_gallery7.jpg">
+                            <img src="./assets/modal_gallery8.jpg">
+                            <img src="./assets/modal_gallery9.jpg">
+                            <img src="./assets/modal_gallery10.jpg">
+                            <img src="./assets/modal_gallery11.jpg">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div class="grid-x" id="trailer">
         <div class="cell small-12">
             <iframe class="wonder_woman_1984" src="https://www.youtube.com/embed/XW2E2Fnh52w?rel=0&controls=0&modestbranding=1&showinfo=0" frameborder="0" allow="accelerometer; encrypted-media;  clipboard-write; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -118,6 +144,18 @@
         (new Image()).src = "./assets/cover.png";
     </script>
     <script>
+        $(document).ready(function() {
+            $(window).scroll(function() {
+                var scroll = $(window).scrollTop();
+                if (scroll > 300) {
+                    $(".navbar").css("background", "black");
+                } else {
+                    $(".navbar").css("background", "transparent");
+                }
+            })
+        })
+    </script>
+    <script>
         $(document).foundation();
 
         $(document).ready(() => {
@@ -126,8 +164,9 @@
                 dots: false,
                 arrows: false,
                 infinite: true,
-                speed: 200,
                 autoplay: true,
+                speed: 150,
+                pauseOnHover: true,
                 slidesToShow: 5,
                 slidesToScroll: 1,
                 responsive: [{
@@ -147,6 +186,24 @@
                     }
                 }]
             });
+
+        });
+    </script>
+    <script>
+        $(document).foundation();
+
+        $(document).ready(() => {
+
+            $('.modal_slider').slick({
+                dots: false,
+                arrows: true,
+                infinite: true,
+                autoplay: true,
+                speed: 200,
+                slidesToShow: 1,
+                slidesToScroll: 1,
+            });
+
         });
     </script>
     <script>
