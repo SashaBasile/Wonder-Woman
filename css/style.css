@@ -71,6 +71,9 @@ body {
 }
 
 @media only screen and (max-width: 750px) {
+  .title img {
+    width: 600px;
+  }
   #modal .button {
     width: 40%;
   }
@@ -92,7 +95,7 @@ body {
     background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2)), url("../assets/mobile_cover.png");
   }
   #header .title img {
-    width: 300px;
+    width: 500px;
   }
   #header .title .button {
     margin-top: 2px;
@@ -203,7 +206,7 @@ body {
 }
 
 #header .title img {
-  max-width: 500px;
+  max-width: 700px;
   opacity: 1;
   -webkit-animation-name: fadeIn;
           animation-name: fadeIn;
@@ -226,6 +229,7 @@ body {
   line-height: 18px;
   -webkit-box-shadow: 3px 7px 10px black;
           box-shadow: 3px 7px 10px black;
+  margin-top: -10px;
 }
 
 #header .title .button:hover {

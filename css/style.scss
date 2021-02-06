@@ -83,6 +83,11 @@ body {
 }
 
 @media only screen and (max-width: 750px) {
+    .title {
+        img {
+            width: 600px;
+        }
+    }
     #modal {
         .button {
             width: 40%;
@@ -107,7 +112,7 @@ body {
         background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2)), url("../assets/mobile_cover.png");
         .title {
             img {
-                width: 300px;
+                width: 500px;
             }
             .button {
                 margin-top: 2px;
@@ -199,13 +204,14 @@ body {
         text-align: center;
         width: 100%;
         img {
-            max-width: 500px;
+            max-width: 700px;
             opacity: 1;
             animation-name: fadeIn;
             animation-duration: 8s;
         }
         .button {
             @include buttons;
+            margin-top: -10px;
         }
         .button:hover {
             transform: translate(1px, 2px);
