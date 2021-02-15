@@ -1,11 +1,13 @@
 $shadows-btn: 3px 7px 10px rgb(0, 0, 0);
 @mixin buttons {
     border: solid 0.5px #e76747;
-    color: #FFFFFF;
-    font-size: 12px;
-    font-weight: bold;
+    color: #ffffff;
+    font: {
+        size: 12px;
+        weight: bold;
+    }
     text-transform: uppercase;
-    background-color: #FF704B;
+    background-color: #ff704b;
     width: 180px;
     height: 50px;
     text-align: center;
@@ -62,13 +64,13 @@ body {
                 li {
                     padding-top: 5%;
                     text-decoration: none;
+                    &:hover {
+                        font-size: 30px;
+                    }
                     a {
                         color: floralwhite;
                         text-shadow: 2px 2px 4px #000000;
                     }
-                }
-                li:hover {
-                    font-size: 30px;
                 }
             }
         }
@@ -127,7 +129,7 @@ body {
     #trailer {
         iframe {
             max-width: 316.5px;
-            max-height: 179.50px;
+            max-height: 179.5px;
         }
         button {
             width: 100px;
@@ -148,12 +150,12 @@ body {
     }
 }
 
-.navbar {
+#navbar {
     position: fixed;
     width: 100%;
     max-height: 60px;
     z-index: 1;
-    background: transparent;
+    background-color: transparent;
     img {
         max-height: 60px;
     }
@@ -171,27 +173,39 @@ body {
                 padding-top: 4%;
                 a {
                     color: floralwhite;
-                    text-shadow: 2px 2px 4px #000000;
-                    text-transform: uppercase;
+                    text: {
+                        shadow: 2px 2px 4px #000000;
+                        transform: uppercase;
+                        -webkit-transform: uppercase;
+                        -moz-transform: uppercase;
+                        -ms-transform: uppercase;
+                        -o-transform: uppercase;
+                    }
                     font-size: 14px;
-                }
-                a:hover {
-                    font-size: 20px;
-                    cursor: pointer;
+                    &:hover {
+                        font-size: 20px;
+                        cursor: pointer;
+                    }
                 }
             }
         }
     }
 }
 
+.scrolled {
+    background-color: black;
+}
+
 #header {
     position: relative;
     display: inline-block;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2)), url("../assets/cover.png");
-    background-size: 100% 100%;
-    background-position: right top;
-    background-repeat: no-repeat;
-    background-color: rgba(0, 0, 0, 1);
+    background: {
+        image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2)), url("../assets/cover.png");
+        size: 100% 100%;
+        position: right top;
+        repeat: no-repeat;
+        color: rgb(0, 0, 0, 1);
+    }
     height: 600px;
     width: 100%;
     .title {
@@ -212,9 +226,13 @@ body {
         .button {
             @include buttons;
             margin-top: -10px;
-        }
-        .button:hover {
-            transform: translate(1px, 2px);
+            &:hover {
+                transform: translate(1px, 2px);
+                -webkit-transform: translate(1px, 2px);
+                -moz-transform: translate(1px, 2px);
+                -ms-transform: translate(1px, 2px);
+                -o-transform: translate(1px, 2px);
+            }
         }
     }
 }
@@ -222,10 +240,12 @@ body {
 #about {
     margin: 40px 0;
     text-align: center;
-    font-family: 'Lato', sans-serif;
+    font-family: "Lato", sans-serif;
     span {
-        font-size: 18px;
-        font-weight: bold;
+        font: {
+            size: 18px;
+            weight: bold;
+        }
     }
     .forever {
         font-size: 26px;
@@ -240,9 +260,10 @@ body {
         height: 150px;
         display: flex;
         flex-direction: row;
-    }
-    img:hover {
-        filter: grayscale(100%);
+        &:hover {
+            filter: grayscale(100%);
+            -webkit-filter: grayscale(100%);
+        }
     }
 }
 
@@ -251,11 +272,13 @@ body {
         width: 100%;
         margin-bottom: 80px;
         border: solid 0.5px #e76747;
-        color: #FFFFFF;
-        font-size: 12px;
-        font-weight: bold;
+        color: #ffffff;
+        font: {
+            size: 12px;
+            weight: bold;
+        }
         text-transform: uppercase;
-        background-color: #FF704B;
+        background-color: #ff704b;
         text-align: center;
         border-radius: 20px;
         line-height: 18px;
@@ -284,7 +307,7 @@ body {
         pointer-events: none;
         .close {
             background: #606061;
-            color: #FFFFFF;
+            color: #ffffff;
             line-height: 25px;
             position: absolute;
             right: -12px;
@@ -322,11 +345,13 @@ body {
 }
 
 #trailer {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2)), url("../assets/wonder_woman_1984w.jpg");
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    background-position: center top;
-    background-color: rgba(0, 0, 0, 1);
+    background: {
+        image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2)), url("../assets/wonder_woman_1984w.jpg");
+        size: 100% 100%;
+        repeat: no-repeat;
+        position: center top;
+        color: rgba(0, 0, 0, 1);
+    }
     height: 90%;
     width: 100%;
     iframe {
@@ -349,17 +374,21 @@ body {
         outline: 0;
         position: relative;
         top: 20%;
-    }
-    button:hover {
-        transform: translate(1px, 2px);
+        &:hover {
+            transform: translate(1px, 2px);
+            -webkit-transform: translate(1px, 2px);
+            -moz-transform: translate(1px, 2px);
+            -ms-transform: translate(1px, 2px);
+            -o-transform: translate(1px, 2px);
+        }
     }
 }
 
 .footer {
-    padding: 10px 0;
-    font-family: 'Lato', sans-serif;
     background-color: rgb(0, 0, 0);
     color: floralwhite;
+    font-family: "Lato", sans-serif;
+    padding: 10px 0;
     ul {
         display: flex;
         flex-direction: row;
@@ -369,9 +398,9 @@ body {
             font-size: 14px;
             a {
                 color: floralwhite;
-            }
-            a:hover {
-                font-size: 16px;
+                &:hover {
+                    font-size: 16px;
+                }
             }
         }
     }

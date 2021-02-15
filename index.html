@@ -17,11 +17,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css" integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A==" crossorigin="anonymous" />
     <script src="https://kit.fontawesome.com/97962c8c90.js" crossorigin="anonymous"></script>
 
+
     <title>Wonder Woman</title>
 </head>
 
 <body>
-    <div class="grid-x navbar">
+    <nav class="grid-x" id="navbar">
+        <!--<div class="grid-x" id="navbar">-->
         <div class="cell medium-2 dropdown">
             <a href="#header">
                 <img src="./assets/logo.png" />
@@ -43,7 +45,8 @@
                 <li><a href="#trailer">Trailer</a></li>
             </ul>
         </div>
-    </div>
+        </div>
+    </nav>
 
     <div class="grid-x" id="header">
         <div class="cell">
@@ -141,21 +144,21 @@
     <script src="js/vendor/foundation.min.js"></script>
 
     <script>
+        //load image
         (new Image()).src = "./assets/cover.png";
-    </script>
-    <script>
-        $(document).ready(function() {
-            $(window).scroll(function() {
-                var scroll = $(window).scrollTop();
-                if (scroll > 300) {
-                    $(".navbar").css("background", "black");
-                } else {
-                    $(".navbar").css("background", "transparent");
-                }
-            })
-        })
-    </script>
-    <script>
+
+        //navbar add scrolled style
+        var navbar = document.querySelector('nav')
+        window.onscroll = function() {
+
+            if (window.pageYOffset > 100) {
+                navbar.classList.add('scrolled')
+            } else {
+                navbar.classList.remove('scrolled')
+            }
+        }
+
+        //load Foundation and Slider
         $(document).foundation();
 
         $(document).ready(() => {
@@ -187,13 +190,6 @@
                 }]
             });
 
-        });
-    </script>
-    <script>
-        $(document).foundation();
-
-        $(document).ready(() => {
-
             $('.modal_slider').slick({
                 dots: false,
                 arrows: true,
@@ -204,9 +200,9 @@
                 slidesToScroll: 1,
             });
 
+
         });
-    </script>
-    <script>
+        //Video trailer swap
         $('.swap_trailers').click(function() {
             var $ww1984 = $('.wonder_woman_1984');
             var $wonderWoman = $('.wonder_woman');

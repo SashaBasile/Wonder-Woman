@@ -107,7 +107,7 @@ body {
   }
   #trailer iframe {
     max-width: 316.5px;
-    max-height: 179.50px;
+    max-height: 179.5px;
   }
   #trailer button {
     width: 100px;
@@ -136,23 +136,23 @@ body {
   }
 }
 
-.navbar {
+#navbar {
   position: fixed;
   width: 100%;
   max-height: 60px;
   z-index: 1;
-  background: transparent;
+  background-color: transparent;
 }
 
-.navbar img {
+#navbar img {
   max-height: 60px;
 }
 
-.navbar .dropdown_content {
+#navbar .dropdown_content {
   visibility: hidden;
 }
 
-.navbar .full_length_menu ul {
+#navbar .full_length_menu ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -164,21 +164,25 @@ body {
   text-decoration: none;
 }
 
-.navbar .full_length_menu ul li {
+#navbar .full_length_menu ul li {
   margin-left: 25px;
   padding-top: 4%;
 }
 
-.navbar .full_length_menu ul li a {
+#navbar .full_length_menu ul li a {
   color: floralwhite;
   text-shadow: 2px 2px 4px #000000;
   text-transform: uppercase;
   font-size: 14px;
 }
 
-.navbar .full_length_menu ul li a:hover {
+#navbar .full_length_menu ul li a:hover {
   font-size: 20px;
   cursor: pointer;
+}
+
+.scrolled {
+  background-color: black;
 }
 
 #header {
@@ -216,11 +220,11 @@ body {
 
 #header .title .button {
   border: solid 0.5px #e76747;
-  color: #FFFFFF;
+  color: #ffffff;
   font-size: 12px;
   font-weight: bold;
   text-transform: uppercase;
-  background-color: #FF704B;
+  background-color: #ff704b;
   width: 180px;
   height: 50px;
   text-align: center;
@@ -240,7 +244,7 @@ body {
 #about {
   margin: 40px 0;
   text-align: center;
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
 }
 
 #about span {
@@ -278,11 +282,11 @@ body {
   width: 100%;
   margin-bottom: 80px;
   border: solid 0.5px #e76747;
-  color: #FFFFFF;
+  color: #ffffff;
   font-size: 12px;
   font-weight: bold;
   text-transform: uppercase;
-  background-color: #FF704B;
+  background-color: #ff704b;
   text-align: center;
   border-radius: 20px;
   line-height: 18px;
@@ -318,7 +322,7 @@ body {
 
 #modal .modalDialog .close {
   background: #606061;
-  color: #FFFFFF;
+  color: #ffffff;
   line-height: 25px;
   position: absolute;
   right: -12px;
@@ -383,11 +387,11 @@ body {
 
 #trailer button {
   border: solid 0.5px #e76747;
-  color: #FFFFFF;
+  color: #ffffff;
   font-size: 12px;
   font-weight: bold;
   text-transform: uppercase;
-  background-color: #FF704B;
+  background-color: #ff704b;
   width: 180px;
   height: 50px;
   text-align: center;
@@ -402,15 +406,18 @@ body {
 }
 
 #trailer button:hover {
+  transform: translate(1px, 2px);
   -webkit-transform: translate(1px, 2px);
-          transform: translate(1px, 2px);
+  -moz-transform: translate(1px, 2px);
+  -ms-transform: translate(1px, 2px);
+  -o-transform: translate(1px, 2px);
 }
 
 .footer {
-  padding: 10px 0;
-  font-family: 'Lato', sans-serif;
   background-color: black;
   color: floralwhite;
+  font-family: "Lato", sans-serif;
+  padding: 10px 0;
 }
 
 .footer ul {
